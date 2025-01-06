@@ -20,6 +20,8 @@ export default function RootLayout({
       <body style={{
         backgroundImage: "url('/bg.gif')",
         backgroundSize: "cover",
+        height: "100svh",
+        width: "100svw"
     }} className={kongText.className}>
       <div className="h-screen bg-black/30">
           {children}
