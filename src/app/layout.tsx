@@ -18,7 +18,6 @@ export default function RootLayout({
   return (
     <html lang="en">
       <body style={{
-        overflow: "hidden",
         backgroundImage: "url('/bg.gif')",
         backgroundSize: "cover",
     }} className={kongText.className}>
