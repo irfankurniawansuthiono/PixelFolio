@@ -1,52 +1,70 @@
+import ButtonChoose from '@/app/utils/ButtonChoose';
+import { motion } from 'framer-motion';
+
 export default function SocialMediaButton() {
+    // Daftar ikon dengan href masing-masing
+    const socialMediaLinks = [
+        { icon: 'whatsapp', href: 'https://wa.me/6285159411104' },
+        { icon: 'twitter', href: 'https://x.com/Suthiono_irfan' },
+        { icon: 'facebook', href: 'https://www.facebook.com/profile.php?id=100022097349921' },
+        { icon: 'instagram', href: 'https://instagram.com/irfan_suthiono' },
+        { icon: 'linkedin', href: 'https://www.linkedin.com/in/irfankurniawans' },
+        { icon: 'github', href: 'https://github.com/irfankurniawansuthiono' },
+        { icon: 'gmail', href: 'mailto:kurniawanmarc93@gmail.com' },
+    ];
+
     return (
         <>
-        <div className="hidden md:flex justify-between w-full items-center h-full">
-                <a href="https://wa.me/6285159411104">
-                    <i className="nes-icon whatsapp is-large"></i>
-                </a>
-                <a href="https://wa.me/6285159411104">
-                    <i className="nes-icon twitter is-large"></i>
-                </a>
-                <a href="https://wa.me/6285159411104">
-                    <i className="nes-icon facebook is-large"></i>
-                </a>
-                <a href="https://wa.me/6285159411104">
-                    <i className="nes-icon instagram is-large"></i>
-                </a>
-                <a href="https://wa.me/6285159411104">
-                    <i className="nes-icon linkedin is-large"></i>
-                </a>
-                <a href="https://wa.me/6285159411104">
-                    <i className="nes-icon github is-large"></i>
-                </a>
-                <a href="https://wa.me/6285159411104">
-                    <i className="nes-icon gmail is-large"></i>
-                </a>
-            </div>
-            <div className="flex md:hidden justify-between w-full ">
-                <a href="https://wa.me/6285159411104">
-                    <i className="nes-icon whatsapp "></i>
-                </a>
-                <a href="https://wa.me/6285159411104">
-                    <i className="nes-icon twitter "></i>
-                </a>
-                <a href="https://wa.me/6285159411104">
-                    <i className="nes-icon facebook "></i>
-                </a>
-                <a href="https://wa.me/6285159411104">
-                    <i className="nes-icon instagram "></i>
-                </a>
-                <a href="https://wa.me/6285159411104">
-                    <i className="nes-icon linkedin "></i>
-                </a>
-                <a href="https://wa.me/6285159411104">
-                    <i className="nes-icon github "></i>
-                </a>
-                <a href="https://wa.me/6285159411104">
-                    <i className="nes-icon gmail "></i>
-                </a>
-            </div>
+            {/* Ikon Media Sosial di layar besar */}
+            <motion.div
+                className="hidden md:flex justify-between w-full items-center h-full"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeOut" }}
+            >
+                {socialMediaLinks.map((item, index) => (
+                    <motion.a
+                        onClick={ButtonChoose}
+                        key={item.icon}
+                        target="_blank"
+                        href={item.href}
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 1,
+                            ease: "easeOut",
+                            delay: index * 0.2, // Delay meningkat setiap ikon
+                        }}
+                    >
+                        <i className={`nes-icon ${item.icon} is-large`} />
+                    </motion.a>
+                ))}
+            </motion.div>
+
+            {/* Ikon Media Sosial di layar kecil */}
+            <motion.div
+                className="flex md:hidden justify-between w-full"
+                initial={{ opacity: 0, y: 30 }}
+                animate={{ opacity: 1, y: 0 }}
+                transition={{ duration: 1, ease: "easeOut", delay: 0.3 }}
+            >
+                {socialMediaLinks.map((item, index) => (
+                    <motion.a
+                        key={item.icon}
+                        href={item.href}
+                        target="_blank"
+                        initial={{ opacity: 0, y: 30 }}
+                        animate={{ opacity: 1, y: 0 }}
+                        transition={{
+                            duration: 1,
+                            ease: "easeOut",
+                            delay: index * 0.2, // Delay meningkat setiap ikon
+                        }}
+                    >
+                        <i className={`nes-icon ${item.icon}`} />
+                    </motion.a>
+                ))}
+            </motion.div>
         </>
     );
 }
