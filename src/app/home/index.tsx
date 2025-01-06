@@ -17,7 +17,7 @@ export default function Home() {
                         <li>
                             <button className="nes-btn is-warning">
                                 <span className="nes-text">
-                                    Hero's Backstory
+                                    Hero&apos;s Backstory
                                 </span>
                             </button>
                         </li>
