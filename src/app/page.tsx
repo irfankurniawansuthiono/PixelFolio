@@ -1,9 +1,11 @@
 import Home from "./home";
+import MusicModal from "./home/modal";
 import SocialMediaButton from "./home/SocialMediaButton";
 
 export default function App() {
   return (
     <div className=" h-screen px-6 md:px-10 flex  items-center justify-center ">
+      <MusicModal/>
       {/* Card Container */}
       <div className="w-full flex h-fit flex-col gap-5 md:flex-row lg:justify-between justify-around">
         <div className="nes-container is-rounded is-centered bg-gray-500/50 flex h-fit items-center flex-col shadow-lg p-6">
