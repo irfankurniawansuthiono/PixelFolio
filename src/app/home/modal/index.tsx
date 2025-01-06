@@ -20,6 +20,7 @@ export default function MusicModal() {
   const playAudio = () => {
     const audio = new Audio("/music/music.mp3");
     audio.play();
+    audio.loop = true;
   }
   return (
     <>

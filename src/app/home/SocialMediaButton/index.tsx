@@ -1,7 +1,7 @@
 export default function SocialMediaButton() {
     return (
         <>
-            <div className="hidden md:flex justify-between w-full">
+        <div className="hidden md:flex justify-between w-full items-center h-full">
                 <a href="https://wa.me/6285159411104">
                     <i className="nes-icon whatsapp is-large"></i>
                 </a>
@@ -24,7 +24,7 @@ export default function SocialMediaButton() {
                     <i className="nes-icon gmail is-large"></i>
                 </a>
             </div>
-            <div className="flex md:hidden justify-between w-full">
+            <div className="flex md:hidden justify-between w-full ">
                 <a href="https://wa.me/6285159411104">
                     <i className="nes-icon whatsapp "></i>
                 </a>
