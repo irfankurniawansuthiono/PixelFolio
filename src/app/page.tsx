@@ -1,6 +1,5 @@
 import Home from "./home";
 import MusicModal from "./home/modal";
-import SocialMediaButton from "./home/SocialMediaButton";
 
 export default function App() {
   return (
