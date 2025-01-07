@@ -8,7 +8,7 @@ import Link from "next/link";
 export default function RetroButton({className, variant = 'normal', disabled = false, href="#", children}: {className?: string, href?: string, variant?: "normal" | "primary"| "success" | "warning" | "error", disabled?: boolean, children?: React.ReactNode}) {
     const variantClass = variant ? `is-${variant}` : "";
     const disabledClass = disabled ? "is-disabled" : "";
-    const [audioPrefix, setAudioPrefix] = useAtom(audioPrefixAtom);
+    const [audioPrefix] = useAtom(audioPrefixAtom);
     return (
         <Link href={href}>
             <button type="button" onClick={() => {audioPrefix ? ButtonChoose() : null }} className={`${className} nes-btn ${variantClass} ${disabledClass}`}>{children}</button>

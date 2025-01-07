@@ -7,7 +7,7 @@ import { audioPrefixAtom } from "@/app/lib/jotai";
 
 export default function MusicModal() {
   const [modalShow, setModalShow] = useState(true);
-  const [audioPrefix, setAudioPrefix] = useAtom(audioPrefixAtom);
+  const [, setAudioPrefix] = useAtom(audioPrefixAtom);
   const [isPlaying, setIsPlaying] = useState(false); // State untuk toggle musik
   const dialogRef = useRef<HTMLDialogElement>(null);
   const audioRef = useRef<HTMLAudioElement | null>(null); // Referensi audio

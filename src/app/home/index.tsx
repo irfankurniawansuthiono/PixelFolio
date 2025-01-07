@@ -1,7 +1,6 @@
 "use client"
 import { motion } from 'framer-motion';
 import SocialMediaButton from "./SocialMediaButton";
-import ButtonChoose from '../utils/ButtonChoose';
 import RetroButton from '../components/button';
 
 export default function Home() {
