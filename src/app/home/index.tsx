@@ -2,6 +2,7 @@
 import { motion } from 'framer-motion';
 import SocialMediaButton from "./SocialMediaButton";
 import ButtonChoose from '../utils/ButtonChoose';
+import RetroButton from '../components/button';
 
 export default function Home() {
   return (
@@ -38,27 +39,21 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.6 }}
           >
-            <button className="nes-btn is-warning is-large px-6 py-3" onClick={ButtonChoose}>
-              <span className="nes-text text-sm">Hero&apos;s Backstory</span>
-            </button>
+           <RetroButton variant="warning" className="nes-btn is-primary is-large px-6 py-3">Heroe&apos;s Backstory</RetroButton>
           </motion.li>
           <motion.li
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.7 }}
           >
-            <button className="nes-btn is-success is-large px-6 py-3"onClick={ButtonChoose}>
-              <span className="nes-text text-sm">Achievements</span>
-            </button>
+            <RetroButton variant="success" className="nes-btn is-primary is-large px-6 py-3">Achievements</RetroButton>
           </motion.li>
           <motion.li
             initial={{ opacity: 0, y: 30 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.8 }}
           >
-            <button className="nes-btn is-error is-large px-6 py-3" onClick={ButtonChoose}>
-              <span className="nes-text text-sm">Power-Ups</span>
-            </button>
+            <RetroButton variant="error" className="nes-btn is-primary is-large px-6 py-3">Skills</RetroButton>
           </motion.li>
         </ul>
       </motion.div>
