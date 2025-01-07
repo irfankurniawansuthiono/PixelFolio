@@ -11,7 +11,12 @@ export default function RetroButton({className, variant = 'normal', disabled = f
     const [audioPrefix] = useAtom(audioPrefixAtom);
     return (
         <Link href={href}>
-            <button type="button" onClick={() => {audioPrefix ? ButtonChoose() : null }} className={`${className} nes-btn ${variantClass} ${disabledClass}`}>{children}</button>
+            <button type="button" onClick={() => {
+    if (audioPrefix) {
+        ButtonChoose();
+    }
+}}
+ className={`${className} nes-btn ${variantClass} ${disabledClass}`}>{children}</button>
         </Link>
     )
 }
