@@ -46,7 +46,7 @@ export default function Home() {
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 1, ease: "easeOut", delay: 0.7 }}
           >
-            <RetroButton variant="success" className="nes-btn is-primary is-large px-6 py-3">Achievements</RetroButton>
+            <RetroButton href='/achievements' variant="success" className="nes-btn is-primary is-large px-6 py-3">Achievements</RetroButton>
           </motion.li>
           <motion.li
             initial={{ opacity: 0, y: 30 }}

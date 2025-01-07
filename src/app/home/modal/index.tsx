@@ -52,10 +52,10 @@ export default function MusicModal() {
       {/* Tombol Toggle Musik */}
       <div className="fixed top-4 right-4 z-50">
         <button
-          className={`nes-btn ${isPlaying ? "is-warning" : "is-primary"}`}
+          className={`nes-btn ${isPlaying ? "is-warning" : "is-primary"} is-small`}
           onClick={toggleAudio}
         >
-          {isPlaying ? "Music Off" : "Music On"}
+          {isPlaying ? <img className="w-3 h-3 md:w-6 md:h-6" src="/icons/music-on.png"  style={{imageRendering: "pixelated"}}/> : <img className="w-3 h-3 md:w-6 md:h-6" src="/icons/music-off.png" style={{imageRendering: "pixelated"}}/>}
         </button>
       </div>
 
