@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { motion } from 'framer-motion';
 import SocialMediaButton from "./SocialMediaButton";
 import RetroButton from '../components/button';
